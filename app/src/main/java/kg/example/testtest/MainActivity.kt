@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initClicer()
     }
 
     private fun initClicer(){
@@ -19,10 +20,10 @@ class MainActivity : AppCompatActivity() {
             btn.setOnClickListener{
                 var fisrtNum = firtEd.text.toString()
                 var secondNum = secondEd.text.toString()
-
                 val math = Math()
-                result.text = math.add(fisrtNum, secondNum)
+                result.text = math.divide(fisrtNum, secondNum)
             }
+
         }
     }
 }
